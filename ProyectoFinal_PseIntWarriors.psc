@@ -189,7 +189,7 @@ Proceso Proyecto_Unificado
 						Dimension dealerCartas[10]
 						indiceMazo <- 0
 					FinSi
-					Si flagInicio = 0 Entonces
+					Si flagInicio = 0 O Saldobj <= 0 Entonces
 						opRepe <- "S"
 						Saldobj <- 0
 						flagSaldo <- 0
