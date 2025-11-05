@@ -666,6 +666,8 @@ Proceso Proyecto_Unificado
 				
 				Escribir ""
 				Escribir "Gracias por jugar. Dinero final: $", dineroDisponibleRuleta
+				Esperar 4 Segundos
+				Limpiar Pantalla
 			3:    Mientras menuActivo Hacer
 					Limpiar Pantalla
 					Escribir"+-----------------------------------------------------------------------------------------------------------+"
