@@ -39,7 +39,7 @@ Proceso Proyecto_Unificado
 	
 	//pantalla de inicio
 	Repetir
-		
+		Limpiar Pantalla
 		OPCION_MENU <- 0
 		Repetir
 			Escribir "========================================================================================================================"
@@ -205,7 +205,6 @@ Proceso Proyecto_Unificado
 					
 					
 					Repetir
-						
 						
 						Escribir ""
 						Escribir "Saldo actual:"
@@ -509,7 +508,7 @@ Proceso Proyecto_Unificado
 						FinSi
 						
 						flagInicio <- 1
-						Si flagInicio = 1 Entonces
+						Si flagInicio = 1 Y Saldobj > 0 Entonces
 							Repetir
 								Si flagRepetir = 1 Entonces
 									Escribir "Por favor, ingrese (S) para seguir jugando o (N) para salir del juego"
@@ -521,14 +520,21 @@ Proceso Proyecto_Unificado
 							Hasta Que Mayusculas(opRepe) = "S" O Mayusculas(opRepe) = "N"
 							flagRepetir <- 0
 						FinSi
-					Hasta Que indiceMazo >= (totalCartas - 4) O opRepe = "N" O Saldo <= 0
-				Hasta Que indiceMazo >= (totalCartas - 4) O opRepe = "N"
+					Hasta Que indiceMazo >= (totalCartas - 4) O opRepe = "N" O Saldobj <= 0
+				Hasta Que indiceMazo >= (totalCartas - 4) O opRepe = "N" O Saldobj <= 0
 				Si indiceMazo >= (totalCartas - 4) Entonces
 					Escribir "No hay cartas suficientes en el mazo para seguir jugando"
 					Escribir "Gracias por jugar al Black Jack! (:"
+					Esperar 3 Segundos
+				FinSi
+				Si Saldobj <= 0 Entonces
+					Escribir "Te quedaste sin saldo"
+					Escribir "Gracias por jugar al Black Jack! (:"
+					Esperar 3 Segundos
 				FinSi
 				Si opRepe = "N" Entonces
 					Escribir "Saliendo del programa..."
+					Esperar 3 Segundos
 				FinSi
 				
 			2:
