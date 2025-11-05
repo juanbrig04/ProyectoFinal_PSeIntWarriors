@@ -2541,16 +2541,6 @@ SubProceso JuegoTragamonedas
                 saldo <- saldo - valor_tiradas
                 jackpot <- jackpot + (valor_tiradas*0.02)
                 
-                // Animación de giro
-                Para i <- 1 Hasta 4 Hacer
-                    a <- Aleatorio(0,2) // Índices válidos: 0, 1, 2
-                    b <- Aleatorio(0,2)
-                    c <- Aleatorio(0,2)
-                    MostrarSimbolos(simbolos[a], simbolos[b], simbolos[c])
-                    Esperar 0.25 Segundos
-                    Limpiar Pantalla
-                FinPara
-                
                 // Resultado final
                 a <- Aleatorio(0,2)
                 b <- Aleatorio(0,2)
