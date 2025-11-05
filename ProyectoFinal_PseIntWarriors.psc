@@ -524,6 +524,7 @@ Proceso Proyecto_Unificado
 				Hasta Que indiceMazo >= (totalCartas - 4) O opRepe = "N" O Saldobj <= 0
 				Si indiceMazo >= (totalCartas - 4) Entonces
 					Escribir "No hay cartas suficientes en el mazo para seguir jugando"
+					Escribir "Saldo final: $", Saldobj
 					Escribir "Gracias por jugar al Black Jack! (:"
 					Esperar 3 Segundos
 				FinSi
@@ -533,6 +534,7 @@ Proceso Proyecto_Unificado
 					Esperar 3 Segundos
 				FinSi
 				Si opRepe = "N" Entonces
+					Escribir "Saldo final: $", Saldobj
 					Escribir "Saliendo del programa..."
 					Esperar 3 Segundos
 				FinSi
