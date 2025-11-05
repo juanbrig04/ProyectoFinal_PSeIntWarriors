@@ -466,7 +466,7 @@ Proceso Proyecto_Unificado
 							Escribir "Usted se a retirado por posible Black Jack del dealer"
 							Escribir "Su apuesta fue de: $", apuesta
 							Escribir "Devolución del 50% de su apuesta: $", (apuesta * 0.5)
-							Saldo <- Saldobj - (apuesta * 0.5)
+							Saldobj <- Saldobj - (apuesta * 0.5)
 						SiNo
 							Si blackjackDealer = 21 Y blackjackJugador = 21 Entonces
 								Escribir "Dealer y jugador sacaron Black Jack"
